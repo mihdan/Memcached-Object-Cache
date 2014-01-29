@@ -342,7 +342,7 @@ class WP_Object_Cache {
 			echo "</pre>\n";
 		}
 
-		if ( $this->debug )
+		if ( isset( $this->debug ) )
 			var_dump($this->memcache_debug);
 	}
 
