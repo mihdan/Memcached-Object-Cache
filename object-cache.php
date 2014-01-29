@@ -3,7 +3,7 @@
 /*
 Plugin Name: Memcached
 Description: Memcached backend for the WP Object Cache.
-Version: 2.0.2
+Version: 2.0.3
 Plugin URI: http://wordpress.org/extend/plugins/memcached/
 Author: Ryan Boren, Denis de Bernardy, Matt Martz
 
@@ -362,7 +362,7 @@ class WP_Object_Cache {
 		if ( isset($memcached_servers) )
 			$buckets = $memcached_servers;
 		else
-			$buckets = array('127.0.0.1');
+			$buckets = array('127.0.0.1:11211');
 
 		reset($buckets);
 		if ( is_int( key($buckets) ) )
